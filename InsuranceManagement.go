@@ -751,7 +751,7 @@ func (t *InsuranceManagement) SelectLeadInsurer(stub shim.ChaincodeStubInterface
 		return shim.Error(fmt.Sprintf("chaincode:SelectLeadInsurer::couldnt marshal finalrfqasbytes "))
 	}
 
-	err=stub.PutState(args[1],finalRFQAsBytes)
+	err=stub.PutState(args[0],finalRFQAsBytes)
 	if err !=nil {
 		return shim.Error(fmt.Sprintf("chaincode:SelectLeadInsurer::couldnt put RFQ to the state "))
 	}
